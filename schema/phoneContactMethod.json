@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "PhoneContactMethod",
+  "properties": {
+    "Phone": {
+      "$ref": "Phone"
+    },
+    "Label": {
+      "type": "string",
+      "x-chance": {
+        "pickone": [[
+          "Home",
+          "Mobile",
+          "Office"
+        ]]
+      }
+    }
+  },
+  "type": "object",
+  "required": [
+    "Label",
+    "Phone"
+  ]
+}

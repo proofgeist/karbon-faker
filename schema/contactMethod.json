@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "ContactMethod",
+  "properties": {
+    "$ref": "address"
+  },
+  "additionalProperties": {
+    "Label": {
+      "type": "string",
+      "x-chance" : {
+        "pickone" : ["Home", "Work", "Warehouse"]
+      }
+    }
+  },
+  "type": "object"
+}

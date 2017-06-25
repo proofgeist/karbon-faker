@@ -1,0 +1,64 @@
+[
+  {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {},
+    "id": "address",
+    "title": "address-schema",
+    "properties": {
+      "AddressLine1": {
+        "id": "/properties/AddressLine1",
+        "type": "string"
+      },
+      "AddressLine2": {
+        "id": "/properties/AddressLine2",
+        "type": "string"
+      },
+      "AddressLine3": {
+        "id": "/properties/AddressLine3",
+        "type": "string"
+      },
+      "City": {
+        "id": "/properties/City",
+        "type": "string",
+        "fake": "city"
+      },
+      "Country": {
+        "id": "/properties/Country",
+        "type": "string"
+      },
+      "County": {
+        "id": "/properties/County",
+        "type": "string"
+      },
+      "Label": {
+        "id": "/properties/Label",
+        "type": "string"
+      },
+      "PostalCode": {
+        "id": "/properties/PostalCode",
+        "type": "string"
+      },
+      "PrimaryInd": {
+        "id": "/properties/PrimaryInd",
+        "type": "boolean"
+      },
+      "StateProvince": {
+        "id": "/properties/StateProvince",
+        "type": "string"
+      }
+    },
+    "required": [
+      "City",
+      "Country",
+      "StateProvince",
+      "Label",
+      "County",
+      "AddressLine2",
+      "AddressLine3",
+      "AddressLine1",
+      "PostalCode",
+      "PrimaryInd"
+    ],
+    "type": "object"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "Customer",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "x-chance": "guid"
+    },
+    "Party": {
+      "$ref": "Party"
+    }
+  },
+  "required": [
+    "Party",
+    "Id"
+  ]
+}

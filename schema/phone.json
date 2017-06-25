@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "Phone",
+  "properties": {
+    "Number": {
+      "type": "string",
+      "x-chance": "phone"
+    }
+  },
+  "type": "object",
+  "required": [
+    "Number"
+  ]
+}

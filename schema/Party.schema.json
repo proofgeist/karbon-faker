@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "Party",
+  "properties": {
+    "Comments": {
+      "type": "string",
+      "x-chance": "paragraph"
+    },
+    "ContactMethod": {
+      "items": [
+        {
+          "$ref": "PhoneContactMethod"
+        },
+        {
+          "$ref": "AddressContactMethod"
+        },
+        {
+          "$ref": "AddressContactMethod"
+        }
+      ],
+      "type": "array"
+    },
+    "Id": {
+      "type": "string",
+      "x-chance": "guid"
+    },
+    "Name": {
+      "type": "string",
+      "x-faker": "company.companyName"
+    },
+    "OrganizationInd": {
+      "type": "boolean",
+      "value": false
+    },
+    "RelatedParties": {
+      "items": {
+        "$ref": "Person"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "EmployeeInd",
+    "VendorInd",
+    "Name",
+    "Comments",
+    "OrganizationInd",
+    "CustomerInd",
+    "ContactMethod",
+    "Id",
+    "RelatedParties"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "Address",
+  "title": "address-schema",
+  "properties": {
+    "AddressLine1": {
+      "id": "/properties/AddressLine1",
+      "type": "string",
+      "x-faker": {
+        "fake": "{{address.streetAddress}}"
+      }
+    },
+    "AddressLine2": {
+      "id": "/properties/AddressLine2",
+      "type": "string",
+      "x-faker": {
+        "fake": "{{address.secondaryAddress}}"
+      }
+    },
+    "AddressLine3": {
+      "id": "/properties/AddressLine3",
+      "type": "string"
+    },
+    "City": {
+      "id": "/properties/City",
+      "type": "string",
+      "x-faker": {
+        "fake": "{{address.city}}"
+      }
+    },
+    "Country": "USA",
+    "County": {
+      "id": "/properties/County",
+      "type": "string",
+      "x-faker": {
+        "fake": "{{address.county}}"
+      }
+    },
+    "Label": {
+      "id": "/properties/Label",
+      "type": "string",
+      "chance": {
+        "pickone": [
+          [
+            "Office",
+            "Home",
+            "Warehouse"
+          ]
+        ]
+      }
+    },
+    "PostalCode": {
+      "id": "/properties/PostalCode",
+      "type": "string",
+      "faker": {
+        "fake": "{{address.zipCode}}"
+      }
+    },
+    "PrimaryInd": {
+      "id": "/properties/PrimaryInd",
+      "type": "boolean"
+    },
+    "StateProvince": {
+      "id": "/properties/StateProvince",
+      "type": "string",
+      "faker": {
+        "fake": "{{address.stateAbbr}}"
+      }
+    }
+  },
+  "required": [
+    "City",
+    "Country",
+    "StateProvince",
+    "Label",
+    "AddressLine2",
+    "AddressLine1",
+    "PostalCode",
+    "PrimaryInd"
+  ],
+  "type": "object"
+}

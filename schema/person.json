@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "Person",
+  "properties": {
+    "Comments": {
+      "id": "/properties/Comments",
+      "type": "string"
+    },
+    "ContactMethods": {
+      "items": {
+        "$ref": "Address"
+      },
+      "minItems": 0,
+      "maxItems": 4,
+      "type": "array"
+    },
+    "Id": {
+      "id": "/properties/Id",
+      "type": "string"
+    },
+    "Name": {
+      "id": "/properties/Name",
+      "type": "string"
+    },
+    "OrganizationInd": false,
+    "VendorInd": {
+      "id": "/properties/VendorInd",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "EmployeeInd",
+    "VendorInd",
+    "Name",
+    "Comments",
+    "OrganizationInd",
+    "CustomerInd",
+    "ContactMethods",
+    "Id"
+  ],
+  "type": "object"
+}
