@@ -5,6 +5,19 @@
     "Number": {
       "type": "string",
       "x-chance": "phone"
+    },
+    "PrimaryInd": {
+      "type": "boolean",
+      "value": true
+    },
+    "FaxInd": {
+      "type": "boolean",
+      "value": true
+    },
+    "Extension": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 9999
     }
   },
   "type": "object",

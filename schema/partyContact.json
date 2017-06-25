@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "PartyContact",
+  "properties": {
+    "Comments": {
+      "type": "string",
+      "x-chance": "paragraph"
+    },
+    "ContactMethod": {
+      "$ref": "ContactMethod"
+    },
+    "Id": {
+      "id": "/properties/Id",
+      "type": "string",
+      "x-chance": "guid"
+    },
+    "FirstName": {
+      "id": "/properties/FirstName",
+      "type": "string",
+      "x-faker": "name.firstName"
+    },
+    "LastName": {
+      "id": "/properties/FirstName",
+      "type": "string",
+      "x-faker": "name.lastName"
+    },
+    "OrganizationInd": {
+      "type": "boolean",
+      "value": false
+    }
+  },
+  "required": [
+    "FirstName",
+    "OrganizationInd",
+    "CustomerInd",
+    "ContactMethods",
+    "Id"
+  ],
+  "type": "object"
+}

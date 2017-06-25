@@ -8,7 +8,14 @@
       "x-chance": "guid"
     },
     "Party": {
-      "$ref": "Party"
+      "oneOf": [
+        {
+          "$ref": "PartyCompany"
+        },
+        {
+          "$ref": "PartyContact"
+        }
+      ]
     }
   },
   "required": [
